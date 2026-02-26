@@ -99,7 +99,19 @@ function CatalogPage({ onAddToCart }: { onAddToCart: (item: CartItem) => void })
           <span className="text-xs font-medium text-fresh-600 bg-fresh-100 px-3 py-1 rounded-full">Доставка сегодня</span>
         </div>
         <div className="absolute -right-8 -top-8 w-48 h-48 rounded-full bg-fresh-200/30 blur-3xl pointer-events-none" />
-        <p className="text-fresh-500 font-medium text-sm mb-1 animate-fade-in">Чистая вода</p>
+
+        {/* Logo */}
+        <div className="flex items-center gap-3 mb-6 animate-fade-in">
+          <img
+            src="https://cdn.poehali.dev/projects/2dd86a3a-10be-44bb-a323-f5e03d8fee6a/bucket/9fd201b8-f434-4bb1-8bdb-34cf7aac400e.png"
+            alt="FreshDrop"
+            className="w-10 h-10 object-contain"
+          />
+          <span className="text-2xl font-bold tracking-tight">
+            <span style={{ color: "#1e3a8a" }}>Fresh</span><span style={{ color: "#38bdf8" }}>Drop</span>
+          </span>
+        </div>
+
         <h1 className="font-display text-4xl font-light leading-tight text-slate-800 animate-fade-in stagger-1">
           Свежесть<br /><span className="italic text-fresh-500">с доставкой</span>
         </h1>
@@ -775,6 +787,16 @@ function AboutPage() {
     <div className="flex flex-col pb-8">
       <div className="hero-bg px-5 pt-12 pb-8 relative overflow-hidden">
         <div className="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-fresh-200/20 blur-3xl" />
+        <div className="flex items-center gap-3 mb-4">
+          <img
+            src="https://cdn.poehali.dev/projects/2dd86a3a-10be-44bb-a323-f5e03d8fee6a/bucket/9fd201b8-f434-4bb1-8bdb-34cf7aac400e.png"
+            alt="FreshDrop"
+            className="w-12 h-12 object-contain"
+          />
+          <span className="text-2xl font-bold">
+            <span style={{ color: "#1e3a8a" }}>Fresh</span><span style={{ color: "#38bdf8" }}>Drop</span>
+          </span>
+        </div>
         <p className="text-fresh-500 text-sm font-medium mb-1">О компании</p>
         <h2 className="font-display text-3xl font-light text-slate-800">О <span className="italic text-fresh-500">FreshDrop</span></h2>
         <p className="text-ice-400 text-sm mt-2">Мы верим, что чистая вода — право каждого</p>
@@ -883,6 +905,11 @@ export default function App() {
 
         {page !== "checkout" && (
           <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md glass border-t border-white/60 px-2 py-2 z-50">
+            {/* Mini logo strip */}
+            <div className="flex items-center justify-center gap-1.5 mb-1 opacity-40">
+              <img src="https://cdn.poehali.dev/projects/2dd86a3a-10be-44bb-a323-f5e03d8fee6a/bucket/9fd201b8-f434-4bb1-8bdb-34cf7aac400e.png" alt="" className="w-3 h-3 object-contain" />
+              <span className="text-[9px] font-bold tracking-wider" style={{ color: "#1e3a8a" }}>FRESH<span style={{ color: "#38bdf8" }}>DROP</span></span>
+            </div>
             <div className="flex">
               {navItems.map(item => {
                 const isActive = page === item.id;
